@@ -3,13 +3,10 @@
 #include <windows.h>
 
 using namespace std;
-bool iterated = false;
 int main()
 {
     while (true)
     {
-        if (iterated)
-            cout << endl;
         cout << "[1] Computer Name" << endl;
         cout << "[2] Hardware" << endl;
         cout << "[3] Advanced" << endl;
@@ -30,10 +27,12 @@ int main()
                 std::getchar();
                 return 1;
             }
-        }
-        else
-            wcout << endl << "'" << page_num << L"' is undefined: Please provide the correct input (one through five)" << endl << endl;
 
-        iterated = true;
+            system("cls");
+        }
+        else {
+            system("cls");
+            wcout << "'" << page_num << L"' is undefined: Please provide the correct input (one through five)" << endl << endl;
+        }
     }
 }
