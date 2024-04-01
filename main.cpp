@@ -21,7 +21,7 @@ int main()
             wstring rundll32_params = L"shell32.dll,Control_RunDLL sysdm.cpl,," + page_num;
             HINSTANCE result = ShellExecuteW(nullptr, L"open", L"rundll32.exe", rundll32_params.c_str(), nullptr, SW_SHOW);
             if ((int)result <= 32) {
-                cerr << "\nError executing rundll32.exe.\nError code: " << (int)result << endl;
+                cerr << "\nError executing rundll32.exe.\nError code: " << (int)result << endl << endl;
 
                 cout << "Press the enter/return key to exit..." << endl;
                 getchar();
